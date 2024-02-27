@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:resqbite/presentation/screens/login_page.dart';
 
 class MyInitPage extends StatefulWidget {
   const MyInitPage({super.key});
@@ -90,6 +91,12 @@ class _MyInitPageState extends State<MyInitPage> {
               child:
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const LoginPage()));
+
 
                 },
                 style: ElevatedButton.styleFrom(
@@ -117,6 +124,8 @@ class _MyInitPageState extends State<MyInitPage> {
               child:
               ElevatedButton(
                 onPressed: () {
+
+
                 },
                 style: ElevatedButton.styleFrom(
                   side: BorderSide(color: Color(0xFF88B04F)),
