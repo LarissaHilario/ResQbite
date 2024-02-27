@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resqbite/presentation/screens/init_page.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  final _formKey = GlobalKey<FormState>();
-  String _email = '';
-  String _password = '';
+class _RegisterPageState extends State<RegisterPage> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Row(
                   children: [
                     Text(
-                      'Bienvenido',
+                      'Regístrate',
                       style: TextStyle(
                         fontSize: 25.0,
                         color: Color(0xFF464646),
@@ -101,10 +99,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: SizedBox(
                   width: 350,
                   child: Form(
-                    key: _formKey,
+
                     child: Column(
                       children: [
-
                         TextFormField(
                           decoration: InputDecoration(
                             border: UnderlineInputBorder(
@@ -125,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 20, // Puedes ajustar este valor según tus necesidades
+                          height: 10, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -135,7 +132,56 @@ class _LoginPageState extends State<LoginPage> {
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
                             ),
+                            focusedErrorBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                            ),
+                            labelText: 'Nombre',
+                            labelStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color(0xFF000000),
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10, // Puedes ajustar este valor según tus necesidades
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
+
                             labelText: 'Contraseña',
+                            labelStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color(0xFF000000),
+                              fontWeight: FontWeight.w400,
+                            ),
+                            suffixIcon: Image.asset(
+                              'assets/images/eye.png',
+                              width: 50,
+                              height: 50,
+
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10, // Puedes ajustar este valor según tus necesidades
+                        ),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
+
+                            labelText: 'Confirmar Contraseña',
                             labelStyle: TextStyle(
                               fontSize: 20.0,
                               color: Color(0xFF000000),
@@ -169,7 +215,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   child: Text(
-                    'Iniciar Sesión',
+                    'Registrarse',
                     style: TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
@@ -185,7 +231,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Padding(
                 padding: const EdgeInsets.only(),
                 child: Image.asset(
-                  'assets/images/login-img.png',
+                  'assets/images/register-img.png',
                   width: double.infinity,
                   fit: BoxFit.cover,
 
