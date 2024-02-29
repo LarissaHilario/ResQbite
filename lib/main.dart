@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resqbite/presentation/screens/init_page.dart';
+import 'package:resqbite/presentation/pages/init_page.dart';
+
 
 
 void main() {

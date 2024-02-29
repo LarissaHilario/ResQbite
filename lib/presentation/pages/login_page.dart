@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:resqbite/presentation/screens/init_page.dart';
-import 'package:resqbite/presentation/screens/profile_page.dart';
+import 'package:resqbite/presentation/pages/init_page.dart';
+import 'package:resqbite/presentation/pages/profile_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

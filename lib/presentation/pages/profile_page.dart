@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:resqbite/presentation/screens/init_page.dart';
+import 'package:resqbite/presentation/pages/init_page.dart';
+import 'package:resqbite/presentation/pages/profile_store_page.dart';
 
-class ProfileStorePage extends StatefulWidget {
-  const ProfileStorePage({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
   @override
-  State<ProfileStorePage> createState() => _ProfileStorePageState();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _ProfileStorePageState extends State<ProfileStorePage> {
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,6 +135,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
                         letterSpacing: 3.5,
+
                       ),
                     ),
                     Divider(
@@ -173,145 +175,44 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                         ),
                   ]))),
       SizedBox(
-        height: 60,
+        height: 510,
       ),
-      Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-              height: 450,
-              decoration: BoxDecoration(
-                color: Color(0xFF88B04F).withOpacity(0.7),
-              ),
-              child: Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
-                  child: Column(children: [
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 0, top: 50),
-                        child: Text(
-                          'Mi tienda',
-                          style: TextStyle(
-                            fontSize: 26.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'FiraSansCondensed',
-                            letterSpacing: 3.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                   Align(
-                      alignment: Alignment.topLeft,
-                      child: Padding(
-                          padding: const EdgeInsets.only(),
-                    child:
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                        children: [
-                          SizedBox(
-                            child: Image.asset(
-                              'assets/images/tienda.png',
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-
-                          Column(
-                              children: [
-                                Text(
-                                  'Pastelería Sofi',
-                                  style: TextStyle(
-                                    fontSize: 26.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
-                                  ),
-                                ),
-                                Text(
-                                  'Col. Oriente Sur #122',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w300,
-                                    fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
-                                  ),
-                                ),
-                                Text(
-                                  'Num. Tel 1262626282',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w300,
-                                    fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
-                                  ),
-                                ),
-                                ]
-                                ),
-
-                          Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.20),
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color: Colors.white.withOpacity(0.1),
-                                width: 3,
-                              ),
-                            ),
-                            child: IconButton(
-                              icon: SvgPicture.asset(
-                                  'assets/images/location.svg'),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const MyInitPage(),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ])
-                      )
-                   ),
-                  ])))),
       Align(
           alignment: Alignment.topCenter,
           child: Container(
               height: 90,
               decoration: BoxDecoration(
                 color: Color(0xFFDDE4D9),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
+              ),child: Padding(
+              padding: const EdgeInsets.only(left: 70, right: 70),
+
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        icon: SvgPicture.asset('assets/images/store.svg',
-                            width: 50, height: 50),
+                        icon: SvgPicture.asset('assets/images/store.svg', width: 50, height: 50),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ProfileStorePage(),
+                            ),
+                          );
+                        },
+                      ),
+                      IconButton(
+
+                        icon: SvgPicture.asset('assets/images/home.svg',width: 50, height: 50),
+
+
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: SvgPicture.asset('assets/images/home.svg',
-                            width: 50, height: 50),
-                        onPressed: () {},
-                      ),
-                      IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/images/location.svg',
-                          width: 50,
-                          height: 50,
-                        ),
-                        onPressed: () {},
+                        icon: SvgPicture.asset('assets/images/location.svg', width: 50, height: 50,),
+
+                        onPressed: () {
+
+                        },
                       ),
                     ]),
               )))

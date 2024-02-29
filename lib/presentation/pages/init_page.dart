@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:resqbite/presentation/screens/login_page.dart';
-import 'package:resqbite/presentation/screens/register_page.dart';
+import 'package:resqbite/presentation/pages/login_page.dart';
+import 'package:resqbite/presentation/pages/register_page.dart';
 
 class MyInitPage extends StatefulWidget {
   const MyInitPage({super.key});
