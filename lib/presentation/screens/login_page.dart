@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resqbite/presentation/screens/init_page.dart';
+import 'package:resqbite/presentation/screens/profile_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -160,7 +161,13 @@ class _LoginPageState extends State<LoginPage> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 180, top: 100),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const ProfilePage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     primary: Color(0xFF88B04F),
                     minimumSize: Size(200, 60),

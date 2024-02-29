@@ -234,7 +234,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   'assets/images/register-img.png',
                   width: double.infinity,
                   fit: BoxFit.cover,
-
                 ),
               ),
             ),
