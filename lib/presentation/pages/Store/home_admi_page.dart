@@ -113,9 +113,9 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
               ),
 
       Align(
-          alignment: Alignment.topCenter,
+          alignment: Alignment.bottomCenter,
           child: Padding(
-              padding: const EdgeInsets.only(top: 276),
+              padding: const EdgeInsets.only(top: 560),
               child:
 
           Container(

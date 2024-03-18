@@ -36,10 +36,9 @@ class ProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 0, left: 20),
+                    padding: const EdgeInsets.only(top: 4, left: 20),
 
                     child: Container(
                         width: 210,
@@ -97,6 +96,7 @@ class ProductCard extends StatelessWidget {
                     )],
                         )),
                   ),
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
