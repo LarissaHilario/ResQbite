@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resqbite/presentation/pages/login_page.dart';
-import 'package:resqbite/presentation/pages/profile_edit_page.dart';
-import 'package:resqbite/presentation/pages/profile_store_page.dart';
+import 'package:resqbite/presentation/pages/Store/profile_edit_page.dart';
+import 'package:resqbite/presentation/pages/Store/profile_store_page.dart';
 import 'package:resqbite/presentation/pages/register_page.dart';
 
 class ErrorPage extends StatefulWidget {

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:resqbite/presentation/pages/Store/home_admi_page.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
-import 'package:resqbite/presentation/pages/profile_edit_page.dart';
+import 'package:resqbite/presentation/pages/Store/profile_edit_page.dart';
 
 class ProfileStorePage extends StatefulWidget {
   const ProfileStorePage({super.key});
@@ -299,7 +300,14 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                       IconButton(
                         icon: SvgPicture.asset('assets/images/store.svg',
                             width: 50, height: 50),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                              builder: (context) => const HomeAdmiPage()
+                              ),
+                          );
+                        },
                       ),
                       IconButton(
                         icon: SvgPicture.asset('assets/images/home.svg',

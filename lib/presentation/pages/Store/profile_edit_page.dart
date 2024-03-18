@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resqbite/presentation/pages/dialog_succesfully_Page.dart';
 import 'package:resqbite/presentation/pages/error_page.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
-import 'package:resqbite/presentation/pages/profile_store_page.dart';
+import 'package:resqbite/presentation/pages/Store/profile_store_page.dart';
 
 class ProfileEditStorePage extends StatefulWidget {
   const ProfileEditStorePage({super.key});

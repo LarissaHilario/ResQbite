@@ -74,6 +74,8 @@ flutter:
     - assets/images/tienda.png
     - assets/images/dialog-succesfully.png
     - assets/images/error.png
+    - assets/images/avatar.png
+    - assets/images/Add.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
