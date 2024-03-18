@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:resqbite/presentation/pages/dialog_succesfully_Page.dart';
+import 'package:resqbite/presentation/pages/error_page.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
 import 'package:resqbite/presentation/pages/profile_store_page.dart';
 
@@ -51,7 +53,7 @@ class _ProfileEditStorePageState extends State<ProfileEditStorePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ProfileStorePage(),
+                      builder: (context) => const DialogPage(),
                     ),
                   );
                 },
@@ -68,23 +70,22 @@ class _ProfileEditStorePageState extends State<ProfileEditStorePage> {
                         fit: BoxFit.fill,
                       ),
                     ),
-                    // Botón flotante para subir imagen
+
                     Container(
                       width: 140,
                       height: 140,
                       child: FloatingActionButton(
                         onPressed: () {
                         },
-                        backgroundColor: Color(0xFFD9D9D9).withOpacity(.45), // Cambia el color de fondo del botón
+                        backgroundColor: Color(0xFFD9D9D9).withOpacity(.45),
                         tooltip: 'Subir imagen',
                         shape: CircleBorder(),
                         child: IconButton(
                             icon: SvgPicture.asset('assets/images/edit.svg', width: 50, height: 50,),
                           onPressed: () {
 
-
                           },
-                        ), // Cambia el color del ícono
+                        ),
                       ),
                     ),
                   ],
@@ -106,7 +107,7 @@ class _ProfileEditStorePageState extends State<ProfileEditStorePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MyInitPage(),
+                      builder: (context) => const ErrorPage(),
                     ),
                   );
                 },
@@ -234,7 +235,7 @@ class _ProfileEditStorePageState extends State<ProfileEditStorePage> {
                                   alignment: Alignment.bottomRight,
                                   children: [
                                     Container(
-                                      width: 120,
+                                      width: 160,
                                       height: 100,
                                       child: Image.asset(
                                         'assets/images/tienda.png',

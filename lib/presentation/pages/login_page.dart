@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                             const ProfilePage()));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF88B04F),
+                    backgroundColor: Color(0xFF88B04F),
                     minimumSize: Size(200, 60),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
