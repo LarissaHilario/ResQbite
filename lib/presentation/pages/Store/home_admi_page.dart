@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:resqbite/presentation/pages/Store/Components/product_card_page.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
 import 'package:resqbite/presentation/pages/Store/profile_edit_page.dart';
 
@@ -98,10 +99,18 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
                 ]),
                   )),
 
-      SizedBox(
-        height: 60,
-      ),
-
+      ProductCard(
+                name: 'Paquete de 4 Donas',
+                imageProduct: 'assets/images/donas.png',
+                stock: 10,
+                price: 20,
+                onDelete: () {
+                  // Implementa la lógica para eliminar el producto aquí
+                },
+                onEdit: () {
+                  // Implementa la lógica para editar el producto aquí
+                },
+              ),
 
       Align(
           alignment: Alignment.topCenter,
