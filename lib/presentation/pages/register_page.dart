@@ -21,10 +21,10 @@ class _RegisterPageState extends State<RegisterPage> {
             Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 46, top: 80),
+                padding: const EdgeInsets.only(left: 30, top: 80),
                 child: Container(
-                  width: 60,
-                  height: 60,
+                  width: 50,
+                  height: 50,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
@@ -55,18 +55,18 @@ class _RegisterPageState extends State<RegisterPage> {
                     Text(
                       'RESQBITE',
                       style: TextStyle(
-                        fontSize: 45.0,
+                        fontSize: 38.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w400,
                         fontFamily: 'FiraSansCondensed',
                         letterSpacing: 3.5,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 1),
                     Image.asset(
                       'assets/images/logo.png',
-                      width: 140,
-                      height: 140,
+                      width: 80,
+                      height: 80,
                     ),
                   ],
                 ),
@@ -75,7 +75,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: const EdgeInsets.only(left: 205),
+                padding: const EdgeInsets.only(left: 135),
                 child: Row(
                   children: [
                     Text(
@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 50),
+                padding: const EdgeInsets.only(left: 20, top: 10),
                 child: SizedBox(
                   width: 350,
                   child: Form(
@@ -115,14 +115,14 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             labelText: 'Correo electrónico',
                             labelStyle: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               color: Color(0xFF000000),
                               fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 10, // Puedes ajustar este valor según tus necesidades
+                          height: 5, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -137,14 +137,14 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             labelText: 'Nombre',
                             labelStyle: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               color: Color(0xFF000000),
                               fontWeight: FontWeight.w400,
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 10, // Puedes ajustar este valor según tus necesidades
+                          height: 5, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -157,7 +157,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                             labelText: 'Contraseña',
                             labelStyle: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               color: Color(0xFF000000),
                               fontWeight: FontWeight.w400,
                             ),
@@ -170,7 +170,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 10, // Puedes ajustar este valor según tus necesidades
+                          height: 5, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
                           decoration: InputDecoration(
@@ -183,7 +183,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                             labelText: 'Confirmar Contraseña',
                             labelStyle: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                               color: Color(0xFF000000),
                               fontWeight: FontWeight.w400,
                             ),
@@ -204,7 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 180, top: 100),
+                padding: const EdgeInsets.only(left: 115, top: 30),
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
