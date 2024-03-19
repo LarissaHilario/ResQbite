@@ -20,12 +20,12 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
       Align(
         alignment: Alignment.topLeft,
         child: Padding(
-          padding: const EdgeInsets.only(left: 46, top: 80, right: 46),
+          padding: const EdgeInsets.only(left: 36, top: 80, right: 36),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Container(
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -46,16 +46,16 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
               ),
             ),
             SizedBox(
-              width: 140,
-              height: 140,
+              width: 80,
+              height: 80,
               child: Image.asset(
                 'assets/images/profile.png',
                 fit: BoxFit.fill,
               ),
             ),
             Container(
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -81,7 +81,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
       Align(
           alignment: Alignment.topLeft,
           child: Padding(
-              padding: const EdgeInsets.only(left: 86, top: 80, right: 46),
+              padding: const EdgeInsets.only(left: 36, top: 60, right: 36),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +89,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     Text(
                       'Nombre',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 18.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -102,7 +102,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     Text(
                       'Kristell',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -111,14 +111,14 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     ),
                     Divider(
                         height: 10, // Puedes ajustar la altura de la línea
-                        thickness: 2, // Puedes ajustar el grosor de la línea
+                        thickness: 1, // Puedes ajustar el grosor de la línea
                         color: Color(
                             0xFFA0A0A7) // Puedes ajustar el color de la línea
                         ),
                     Text(
                       'Apellido',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 18.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -131,7 +131,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     Text(
                       'Kristell',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -140,14 +140,14 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     ),
                     Divider(
                         height: 10, // Puedes ajustar la altura de la línea
-                        thickness: 2, // Puedes ajustar el grosor de la línea
+                        thickness: 1, // Puedes ajustar el grosor de la línea
                         color: Color(
                             0xFFA0A0A7) // Puedes ajustar el color de la línea
                         ),
                     Text(
                       'Correo Electrónico',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 18.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -160,7 +160,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     Text(
                       '213477@ids.upchiapas.edu.mx',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -169,23 +169,23 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                     ),
                     Divider(
                         height: 10, // Puedes ajustar la altura de la línea
-                        thickness: 2, // Puedes ajustar el grosor de la línea
+                        thickness: 1, // Puedes ajustar el grosor de la línea
                         color: Color(
                             0xFFA0A0A7) // Puedes ajustar el color de la línea
                         ),
                   ]))),
       SizedBox(
-        height: 60,
+        height: 40,
       ),
       Align(
           alignment: Alignment.topCenter,
           child: Container(
-              height: 450,
+              height: 344,
               decoration: BoxDecoration(
                 color: Color(0xFF88B04F).withOpacity(0.7),
               ),
               child: Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  padding: const EdgeInsets.only(left: 36, right: 20),
                   child: Column(children: [
                     Align(
                       alignment: Alignment.topLeft,
@@ -194,7 +194,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                         child: Text(
                           'Mi tienda',
                           style: TextStyle(
-                            fontSize: 26.0,
+                            fontSize: 24.0,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'FiraSansCondensed',
@@ -227,31 +227,31 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                                 Text(
                                   'Pastelería Sofi',
                                   style: TextStyle(
-                                    fontSize: 26.0,
+                                    fontSize: 20.0,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
                                     fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
+                                    letterSpacing: 2,
                                   ),
                                 ),
                                 Text(
                                   'Col. Oriente Sur #122',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 14,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w300,
                                     fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
+                                    letterSpacing: 1,
                                   ),
                                 ),
                                 Text(
                                   'Num. Tel 1262626282',
                                   style: TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 14,
                                     color: Colors.white,
                                     fontWeight: FontWeight.w300,
                                     fontFamily: 'FiraSansCondensed',
-                                    letterSpacing: 3.5,
+                                    letterSpacing: 1,
                                   ),
                                 ),
                                 ]
@@ -293,7 +293,7 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                 color: Color(0xFFDDE4D9),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
+                padding: const EdgeInsets.only(left: 50, right: 50),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

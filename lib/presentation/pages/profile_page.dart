@@ -23,8 +23,8 @@ class _ProfilePageState extends State<ProfilePage> {
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Container(
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -45,16 +45,16 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             SizedBox(
-              width: 140,
-              height: 140,
+              width: 120,
+              height: 120,
               child: Image.asset(
                 'assets/images/profile.png',
                 fit: BoxFit.fill,
               ),
             ),
             Container(
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -80,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
       Align(
           alignment: Alignment.topLeft,
           child: Padding(
-              padding: const EdgeInsets.only(left: 86, top: 80, right: 46),
+              padding: const EdgeInsets.only(left: 56, top: 80, right: 46),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +88,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Nombre',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 20.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -101,7 +101,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Kristell',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -117,7 +117,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Apellido',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 20.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -130,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Kristell',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -147,7 +147,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       'Correo Electrónico',
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 20.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -160,7 +160,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       '213477@ids.upchiapas.edu.mx',
                       style: TextStyle(
-                        fontSize: 18.0,
+                        fontSize: 16.0,
                         color: Color(0xFF464646),
                         fontWeight: FontWeight.w500,
                         fontFamily: 'FiraSansCondensed',
@@ -175,7 +175,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                   ]))),
       SizedBox(
-        height: 510,
+        height: 325,
       ),
       Align(
           alignment: Alignment.topCenter,
@@ -184,7 +184,7 @@ class _ProfilePageState extends State<ProfilePage> {
               decoration: BoxDecoration(
                 color: Color(0xFFDDE4D9),
               ),child: Padding(
-              padding: const EdgeInsets.only(left: 70, right: 70),
+              padding: const EdgeInsets.only(left: 50, right: 50),
 
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
