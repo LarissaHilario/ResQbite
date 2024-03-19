@@ -237,9 +237,9 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                                 Text(
                                   'Col. Oriente Sur #122',
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                     fontFamily: 'FiraSansCondensed',
                                     letterSpacing: 1,
                                   ),
@@ -247,9 +247,9 @@ class _ProfileStorePageState extends State<ProfileStorePage> {
                                 Text(
                                   'Num. Tel 1262626282',
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w300,
+                                    fontWeight: FontWeight.w500,
                                     fontFamily: 'FiraSansCondensed',
                                     letterSpacing: 1,
                                   ),
