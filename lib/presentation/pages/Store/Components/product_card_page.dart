@@ -28,7 +28,7 @@ class ProductCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        margin: const EdgeInsets.all(32),
+        margin: const EdgeInsets.all(22),
         child: Padding(
           padding: const EdgeInsets.only(),
           child: Row(
@@ -38,11 +38,10 @@ class ProductCard extends StatelessWidget {
               Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 4, left: 20),
-
+                    padding: const EdgeInsets.only(top: 4),
                     child: Container(
-                        width: 210,
-                        height: 80,
+                        width: 200,
+                        height: 70,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10), // Ajusta el radio según sea necesario
@@ -57,38 +56,41 @@ class ProductCard extends StatelessWidget {
                               Text(
                                 name,
                                 style: TextStyle(
-                                  fontSize: 19,
+                                  fontSize: 16,
                                   color: Color(0xFF88B04F),
                                   fontWeight: FontWeight.w500,
                                   fontFamily: 'FiraSansCondensed',
-                                  letterSpacing: 2.5,
+                                  letterSpacing: 2,
                                 ),
                               ),
-                              SizedBox(height: 5),
+
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
+                                  SizedBox(width: 5),
+
                                   Text(
-                                    'Stock: $stock',
+                                    'Stock $stock',
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Color(0xFF88B04F),
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'FiraSansCondensed',
+
+                                    ),
+                                  ),
+
+                                  Text(
+                                    ' \$${price.toStringAsFixed(2)}',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Color(0xFF88B04F),
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: 'FiraSansCondensed',
 
                                     ),
                                   ),
                                   SizedBox(width: 15),
-                                  Text(
-                                    'Precio: \$${price.toStringAsFixed(2)}',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color(0xFF88B04F),
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: 'FiraSansCondensed',
-
-                                    ),
-                                  ),
                                 ],
                               )
                             ],
@@ -96,20 +98,19 @@ class ProductCard extends StatelessWidget {
                     )],
                         )),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+
                     children: [
                       Align(
                         alignment: Alignment.center,
                         child: Padding(
-                            padding: const EdgeInsets.only(left: 22),
+                            padding: const EdgeInsets.only(left: 15),
                             child: ElevatedButton(
                               onPressed: onDelete,
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Color(0xFFB63D3D),
-                                minimumSize: Size(30, 30),
+                                minimumSize: Size(20, 30),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40),
                                 ),
@@ -119,14 +120,14 @@ class ProductCard extends StatelessWidget {
                                   children: [
                                     SvgPicture.asset(
                                       'assets/images/Delete.svg',
-                                      width: 16,
-                                      height: 16,
+                                      width: 13,
+                                      height: 13,
                                     ),
-                                    SizedBox(width: 5),
+                                    SizedBox(width:3),
                                     Text(
                                       'Eliminar',
                                       style: TextStyle(
-                                        fontSize: 14.0,
+                                        fontSize: 13.0,
                                         color: Colors.white,
                                         fontWeight: FontWeight.normal,
                                         fontFamily: 'FiraSansCondensed',
@@ -148,21 +149,21 @@ class ProductCard extends StatelessWidget {
                                 side: BorderSide(color: Colors.white), // Borde verde
                                 borderRadius: BorderRadius.circular(50),
                               ),
-                              minimumSize: Size(30, 30),
+                              minimumSize: Size(20, 30),
                             ),
                             child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
                                     'assets/images/edit-white.svg',
-                                    width: 16,
-                                    height: 16,
+                                    width: 13,
+                                    height: 13,
                                   ),
                                   SizedBox(width: 5),
                                   Text(
                                     'Editar',
                                     style: TextStyle(
-                                      fontSize: 14.0,
+                                      fontSize: 13.0,
                                       color: Colors.white,
                                       fontWeight: FontWeight.normal,
                                       fontFamily: 'FiraSansCondensed',
@@ -177,12 +178,12 @@ class ProductCard extends StatelessWidget {
                 ],
               ),
               Align(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.topRight,
                   child: Padding(
-                    padding: const EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(10),
                     child: SizedBox(
-                      width: 180,
-                      height: 140,
+                      width: 110,
+                      height: 120,
                       child: imageProduct.endsWith('.svg')
                           ? SvgPicture.asset(
                               imageProduct,

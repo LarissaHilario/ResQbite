@@ -20,13 +20,13 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
       Align(
         alignment: Alignment.topLeft,
         child: Padding(
-          padding: const EdgeInsets.only(left: 46, top: 80, right: 46),
+          padding: const EdgeInsets.only(left: 28, top: 80, right: 28),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(
               'RESQBITE',
               style: TextStyle(
-                fontSize: 40.0,
+                fontSize: 38.0,
                 color: Color(0xFF464646),
                 fontWeight: FontWeight.w500,
                 fontFamily: 'FiraSansCondensed',
@@ -34,8 +34,8 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
               ),
             ),
             SizedBox(
-              width: 60,
-              height: 60,
+              width: 50,
+              height: 50,
               child: Image.asset(
                 'assets/images/avatar.png',
                 fit: BoxFit.fill,
@@ -47,18 +47,18 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
       Align(
           alignment: Alignment.topLeft,
           child: Padding(
-            padding: const EdgeInsets.only(left: 46, top: 40, right: 46),
+            padding: const EdgeInsets.only(left: 28, top: 40, right: 28),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'MIS PRODUCTOS',
                     style: TextStyle(
-                      fontSize: 32.0,
+                      fontSize: 25.0,
                       color: Color(0xFF464646),
                       fontWeight: FontWeight.w300,
                       fontFamily: 'FiraSansCondensed',
-                      letterSpacing: 2.5,
+                      letterSpacing: 2,
                     ),
                   ),
 
@@ -68,7 +68,7 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFF88B04F),
-                      minimumSize: Size(50, 40),
+                      minimumSize: Size(10, 30),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -78,14 +78,14 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset('assets/images/Add.svg',
-                          width: 16,
-                          height: 16,
+                          width: 13,
+                          height: 13,
                         ),
-                        SizedBox(width: 7),
+                        SizedBox(width: 5),
                         Text(
                           'Añadir Producto',
                           style: TextStyle(
-                            fontSize: 16.0,
+                            fontSize: 13.0,
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'FiraSansCondensed',
@@ -95,12 +95,11 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
                     ),
                   ),
 
-
                 ]),
                   )),
 
       ProductCard(
-                name: 'Paquete de 4 Donas',
+                name: 'PAQUETE DE 4 DONAS',
                 imageProduct: 'assets/images/donas.png',
                 stock: 10,
                 price: 20,
@@ -124,7 +123,7 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
                 color: Color(0xFFDDE4D9),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
+                padding: const EdgeInsets.only(left: 50, right: 50),
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
