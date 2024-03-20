@@ -69,7 +69,7 @@ class _HomeAdmiPageState extends State<HomeAdmiPage> {
             Align(
               alignment: Alignment.topLeft,
               child: Padding(
-                padding: const EdgeInsets.only(left: 46, top: 80, right: 46),
+                padding: const EdgeInsets.only(left: 46, top: 50, right: 46),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
