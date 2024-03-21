@@ -1,6 +1,11 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
+import 'package:resqbite/presentation/pages/login_page.dart';
+import 'package:http/http.dart' as http;
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -10,7 +15,84 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
+  void navigateLoginScreen() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginPage()),
+    );
+  }
+
+  String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return "Por favor ingrese una contraseña";
+    } else if (value.length < 8) {
+      return "La contraseña debe tener al menos 8 caracteres";
+    } else if (value.length > 15) {
+      return "La contraseña no puede ser mayor a 15 caracteres";
+    } else {
+      return null;
+    }
+  }
+
+  String? _passwordErrorText;
+
+  Future<void> _createUser() async {
+    if (_formKey.currentState!.validate()) {
+      if (_passwordController.text != _confirmPasswordController.text) {
+        setState(() {
+          _passwordErrorText = 'Las contraseñas no coinciden';
+          return;
+        });
+      } else {
+        try {
+          String url = 'http://3.208.35.242/signup';
+
+          final userData = {
+            'name': _usernameController.text,
+            'last_name': _lastnameController.text,
+            'email': _emailController.text,
+            'password': _passwordController.text,
+          };
+          print(userData);
+          final response = await http.post(
+            Uri.parse(url),
+            headers: <String, String>{
+              'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: jsonEncode(userData),
+          );
+          print('Ya se envio');
+          print(response.body);
+          final getResponse = await http.post(
+              Uri.parse(response.headers["location"]!),
+              body: jsonEncode(userData),
+              headers: {
+                HttpHeaders.contentTypeHeader: "application/json",
+              });
+          print(getResponse.body);
+          print(getResponse.statusCode);
+          if (getResponse.statusCode == 200) {
+            print('Usuario creado exitosamente.');
+            navigateLoginScreen();
+          } else {
+            print(
+                'Error al crear el usuario. Código de estado: ${response.statusCode}');
+          }
+        } catch (error) {
+          print('Error al conectar con el servidor: $error');
+        }
+      }
+      return;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,10 +181,11 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: SizedBox(
                   width: 350,
                   child: Form(
-
+                    key: _formKey,
                     child: Column(
                       children: [
                         TextFormField(
+                          controller: _emailController,
                           decoration: InputDecoration(
                             border: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
@@ -122,9 +205,11 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 5, // Puedes ajustar este valor según tus necesidades
+                          height:
+                              5, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
+                          controller: _usernameController,
                           decoration: InputDecoration(
                             border: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
@@ -144,9 +229,11 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         SizedBox(
-                          height: 5, // Puedes ajustar este valor según tus necesidades
+                          height:
+                              5, // Puedes ajustar este valor según tus necesidades
                         ),
                         TextFormField(
+                          controller: _lastnameController,
                           decoration: InputDecoration(
                             border: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
@@ -154,7 +241,32 @@ class _RegisterPageState extends State<RegisterPage> {
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
                             ),
-
+                            focusedErrorBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                            ),
+                            labelText: 'Apellido',
+                            labelStyle: TextStyle(
+                              fontSize: 16.0,
+                              color: Color(0xFF000000),
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        TextFormField(
+                          controller: _passwordController,
+                          validator: (value) {
+                            return validatePassword(value);
+                          },
+                          decoration: InputDecoration(
+                            border: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Color(0xFFA0A0A7)),
+                            ),
                             labelText: 'Contraseña',
                             labelStyle: TextStyle(
                               fontSize: 16.0,
@@ -165,14 +277,17 @@ class _RegisterPageState extends State<RegisterPage> {
                               'assets/images/eye.png',
                               width: 50,
                               height: 50,
-
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 5, // Puedes ajustar este valor según tus necesidades
+                          height: 5,
                         ),
                         TextFormField(
+                          controller: _confirmPasswordController,
+                          validator: (value) {
+                            return validatePassword(value);
+                          },
                           decoration: InputDecoration(
                             border: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
@@ -180,7 +295,6 @@ class _RegisterPageState extends State<RegisterPage> {
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Color(0xFFA0A0A7)),
                             ),
-
                             labelText: 'Confirmar Contraseña',
                             labelStyle: TextStyle(
                               fontSize: 16.0,
@@ -191,7 +305,6 @@ class _RegisterPageState extends State<RegisterPage> {
                               'assets/images/eye.png',
                               width: 50,
                               height: 50,
-
                             ),
                           ),
                         ),
@@ -206,7 +319,9 @@ class _RegisterPageState extends State<RegisterPage> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 115, top: 30),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    _createUser();
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF88B04F),
                     minimumSize: Size(200, 60),
