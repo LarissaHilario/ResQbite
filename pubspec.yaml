@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
+  dio: ^4.0.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -40,12 +43,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -54,6 +59,27 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/Anuncio-img.png
+    - assets/images/arrow-left.svg
+    - assets/images/login-img.png
+    - assets/images/logo.png
+    - assets/images/eye.png
+    - assets/images/register-img.png
+    - assets/images/edit.svg
+    - assets/images/log-out.svg
+    - assets/images/profile.png
+    - assets/images/store.svg
+    - assets/images/home.svg
+    - assets/images/location.svg
+    - assets/images/Union.svg
+    - assets/images/perfil.svg
+    - assets/images/tienda.png
+    - assets/images/dialog-succesfully.png
+    - assets/images/error.png
+    - assets/images/avatar.png
+    - assets/images/Add.svg
+    - assets/images/donas.png
+    - assets/images/Delete.svg
+    - assets/images/edit-white.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -65,6 +91,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Fira_Sans_Condensed/FiraSansCondensed-Regular.ttf
         - asset: assets/fonts/Fira_Sans_Condensed/FiraSansCondensed-Bold.ttf
+        - asset: assets/fonts/Fira_Sans_Condensed/FiraSansCondensed-Light.ttf
           weight: 700
 
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resqbite/presentation/screens/init_page.dart';
+import 'package:resqbite/presentation/pages/init_page.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyInitPage(), //llama a la página inicial
+
     );
   }
 }
