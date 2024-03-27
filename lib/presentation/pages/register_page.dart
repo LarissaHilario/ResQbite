@@ -70,7 +70,8 @@ class _RegisterPageState extends State<RegisterPage> {
             body: jsonEncode(userData),
           );
           print('Ya se envio');
-          print(response.body);
+          print(response.statusCode);
+
           final getResponse = await http.post(
               Uri.parse(response.headers["location"]!),
               body: jsonEncode(userData),
@@ -79,6 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
               });
           print(getResponse.body);
           print(getResponse.statusCode);
+
           if (getResponse.statusCode == 200) {
             print('Usuario creado exitosamente.');
             navigateLoginScreen();
