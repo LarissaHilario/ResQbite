@@ -80,6 +80,8 @@ flutter:
     - assets/images/donas.png
     - assets/images/Delete.svg
     - assets/images/edit-white.svg
+    - assets/images/arrow-right.svg
+    - assets/images/Arrow Right.svg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

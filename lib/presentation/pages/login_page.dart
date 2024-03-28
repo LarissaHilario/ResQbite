@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:resqbite/presentation/pages/home_page.dart';
 import 'package:resqbite/presentation/pages/init_page.dart';
-import 'package:resqbite/presentation/pages/profile_page.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -166,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                            const ProfilePage()));
+                            const HomePage()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF88B04F),

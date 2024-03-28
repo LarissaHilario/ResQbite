@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:dio/dio.dart';
-import 'dart:convert';
 import 'package:resqbite/presentation/pages/init_page.dart';
 import 'package:resqbite/presentation/pages/Store/profile_store_page.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resqbite/presentation/pages/login_page.dart';
+
 import 'package:resqbite/presentation/pages/Store/profile_store_page.dart';
-import 'package:resqbite/presentation/pages/register_page.dart';
+
 
 class DialogPage extends StatefulWidget {
   const DialogPage({super.key});
